@@ -1,9 +1,9 @@
 # CrptoLib
 中山大学信息安全基础课程实验作业/Experimental homework of information-security-basic course in SYSU.
 
-CrptoLib是一个较为简单的，实验性质的加密算法库，包含《密码编码学与网络安全》书中主要加密方案，例如DES,AES,MD5,SHA-512等常见加密方案的手写实现。
+CrptoLib是一个较为简单的，实验性质的加密算法库，包含网络编程中常用的，《密码编码学与网络安全》书中的主要加密方案，例如DES,AES,MD5,SHA-512等常见加密方案的实现。
 
-各个模块的使用方法请参见各个模块的文件夹内的readme.md文件，若发现存在算法上的错误，欢迎留言，非常感谢。
+各个模块的说明文档请参见各个模块的文件夹内的readme.md文件。
 
 ### 目录
 #### 1. AES：AES分组加密模块
@@ -13,7 +13,7 @@ CrptoLib是一个较为简单的，实验性质的加密算法库，包含《密
 #### 5. RSA：RSA公钥加密模块
 #### 6. Diffie-Hellman：Diffie-Hellman密钥交换模块
 #### 7. Elgamel：Elgamel密钥交换模块
-#### 8. DAA：DAA消息认证码(MAC)模块 (附注: DAA标准因安全性问题已经于2003年后废止，不推荐使用）
+#### 8. DAA：DAA消息认证码(MAC)模块 
 #### 9. HMAC：基于MD5和SHA512 Hash函数的消息认证码(MAC)模块
 #### 10. Pattern：分组加密集成模块，集成了AES, DES分组加密算法，并支持CBC, ECB, CTR, OCF, CFB五种分组密码的加密模式
 #### 11. HashCenter：Hash函数集成模块，集成了MD5, SHA512 Hash函数，并支持文件输入

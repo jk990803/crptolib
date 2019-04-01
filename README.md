@@ -1,9 +1,9 @@
 # CrptoLib
 中山大学信息安全基础课程实验作业/Experimental homework of information-security-basic course in SYSU.
 
-CrptoLib是一个较为简单的，实验性质的加密算法库，包含网络编程中常用的，《密码编码学与网络安全》书中的主要加密方案，例如DES,AES,MD5,SHA-512等常见加密方案的实现。
+CrptoLib是与他人合作的网络安全项目TrialSSL的一部分，是一个较为简单的，实验性质的加密算法库。其中包含网络编程中常用的加密方案与Hash函数等安全机制，例如DES,AES,MD5,SHA-512等常见方案的实现。
 
-各个模块的说明文档请参见各个模块的文件夹内的readme.md文件。
+本项目基于RFC标准文档实现，最大程度地保证正确性，各个模块的说明文档请参见各个模块的文件夹内的readme.md文件。
 
 ### 目录
 #### 1. AES：AES分组加密模块

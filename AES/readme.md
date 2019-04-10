@@ -1,6 +1,6 @@
 # AES加密模块
 
-   本模块基于\[RFC 3962]实现，\[RFC 3962]官方文档请参见： https://tools.ietf.org/html/rfc3962 。
+   本模块基于\[RFC 3962]和《密码编码学与网络安全》实现，\[RFC 3962]官方文档请参见： https://tools.ietf.org/html/rfc3962 。
    
    ## 1. 引用头文件"AES.h"
     #include "AES.h"

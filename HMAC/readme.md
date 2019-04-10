@@ -1,4 +1,6 @@
 # HMAC 消息认证码(mac)模块
+   
+   《密码编码学和网络安全》中关于HMAC的算法叙述有细微的错误，请参见\[RFC 4635]：https://tools.ietf.org/html/rfc4635 。
 
    ## 1. 引用头文件"HMAC.h"
     #include "HMAC.h"

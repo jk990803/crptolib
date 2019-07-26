@@ -1,50 +1,48 @@
-<template> 
-    <!--注意DOM参数绑定需要使用v-bind，且仅有html属性名忽略大小写，html属性参数和属性值均不忽略大小写-->
-    <div id="TestCom">
-        <button v-if="seen" v-on:click="onClickButton">点击显示确认框</button>
-        <DialogCom v-if="!seen" 
-            v-on:verifyClicked="verifyClickedHandler"   
-            v-on:cancelClicked="cancelClickedHandler"     
-            v-bind:hint="hint"></DialogCom>
+<template>
+    <!-- 模板部分使用微信风格的weUI库中的模板组件-->
+    <div id="dialog1">
+        <div class="weui-mask"></div>
+        <div class="weui-dialog">
+            <div class="weui-dialog__hd"><strong class="weui-dialog__title">弹窗标题</strong></div>
+            <div class="weui-dialog__bd">{{hint}}</div>
+            <div class="weui-dialog__ft">
+                <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default" v-on:click="cancelOnClick">取消</a>
+                <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" v-on:click="verifyOnClick">确认</a>
+            </div>
+        </div>
     </div>
 </template>
 
-<script>
-import DialogCom from './DialogCom'
-export default {
-    name: "TestCom",
 
+<script>
+// Confirm组件: 询问用户是否确认某项操作
+export default {
+    name:"DialogCom",
     data() {
         return {
-            result: true,
-            hint:"对话框提示",
-            seen: true
         }
     },
-
-    components: {
-        DialogCom
+    props: {
+        hint: String,            // 对话框的自定义文本
     },
-    
-    methods:
-    {
-        verifyClickedHandler(param) {
-            this.result=true;
-            this.checkres=param;
-            this.seen=!this.seen;    // 对话框功能执行完毕，隐藏对话框，重新显示按钮
-            console.log("用户选择了确认");
+    methods: {
+        // 父组件通过设置监听器，监听veriflyClicked事件来捕获用户点击确认按钮的行为
+        verifyOnClick() {
+            this.$emit("verifyClicked", this.checkResult);
         },
 
-        cancelClickedHandler(param) {
-            this.result=false;
-            this.checkres=param; 
-            this.seen=!this.seen;    // 对话框功能执行完毕，隐藏对话框，重新显示按钮
-            console.log("用户选择了取消");
-        },
-
-        onClickButton() {
-            this.seen=!this.seen;    // 用户点击按钮后，隐藏按钮，展示对话框    
+        // 子组件通过设置监听器，监听veriflyClicked事件来捕获用户点击取消按钮的行为
+        cancelOnClick() {
+            this.$emit("cancelClicked", this.checkResult);
         }
-    }
+
+        // 父组件和子组件从子组件和
+    },
 }
 </script>
+
+<!-- scope限定符限定css样式仅仅只限定在本组件的html模板中使用-->
+<style scope>
+</style>
+
+

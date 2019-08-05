@@ -1,9 +1,7 @@
 # CrptoLib
 中山大学信息安全基础课程实验作业/Experimental homework of information-security-basic course in SYSU.
 
-CrptoLib是与他人合作的密码学库MyCrpto的一部分，MyCrpto是一个与crpto++类似的密码学库。
-
-CrptoLib是一个较为简单的，实验性质的加密算法库。其中包含网络编程中常用的加密方案与Hash函数等安全机制，例如DES,AES,MD5,SHA-512等常见方案的实现。
+CrptoLib是与他人合作的密码学库MyCrpto的一部分，是一个较为简单的，实验性质的加密算法实现。其中包含网络编程中常用的加密方案与Hash函数等安全机制，例如DES,AES,MD5,SHA-512等常见方案的实现。
 
 本项目基于RFC标准文档和《密码编码学与网络安全》实现，最大程度地保证正确性，各个模块的说明文档请参见各个模块的文件夹内的readme.md文件。
 
